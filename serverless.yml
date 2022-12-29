@@ -3,6 +3,11 @@ provider:
   name: aws
   runtime: python3.8
 
+package:
+  include:
+    - requirements.txt
+
+
 functions:
   app:
     handler: app.app

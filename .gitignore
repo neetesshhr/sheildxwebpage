@@ -2,6 +2,5 @@ node_modules
 build
 .serverless
 __pycache__
-.serverless-wsgi
 wsgi_handler.py
 serverless_wsgi.py

@@ -23,5 +23,7 @@ jobs:
           aws-region: us-west-2
       - name: Install Serverless Framework
         run: npm i -g serverless
+      - name: serverless package
+        run: serverless package
       - name: Deploy to Lambda
         run: serverless deploy

@@ -4,3 +4,4 @@ build
 __pycache__
 wsgi_handler.py
 serverless_wsgi.py
+.serverless_wsgi

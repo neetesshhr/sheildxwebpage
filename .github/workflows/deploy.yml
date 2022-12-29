@@ -23,6 +23,10 @@ jobs:
           aws-region: us-west-2
       - name: Install Serverless Framework
         run: npm i -g serverless
+      - name: Install plugins
+        run: serverless plugin install -n serverless-python-requirements
+      - name: Install serverless wsgi
+        run: erverless-wsgi
       - name: serverless package
         run: serverless package
       - name: Deploy to Lambda

@@ -26,7 +26,7 @@ jobs:
       - name: Install plugins
         run: serverless plugin install -n serverless-python-requirements
       - name: Install serverless wsgi
-        run: erverless-wsgi
+        run: serverless plugin install -n serverless-wsgi
       - name: serverless package
         run: serverless package
       - name: Deploy to Lambda

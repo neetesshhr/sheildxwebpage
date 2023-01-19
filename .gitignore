@@ -6,3 +6,5 @@ wsgi_handler.py
 serverless_wsgi.py
 .serverless_wsgi
 init_db.py
+
+init_db.py

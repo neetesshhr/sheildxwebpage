@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}ShieldX careers{% endblock %}
+{%block activecareers %} active {% endblock %}
+{% block content %}
+<div>
+   
+    {% for book in books %}
+    <div class='book'>
+        <h2>Open position </h2>
+     {{book[1]}}
+     <p>Details:- {{book[2]}}
+     </p>
+    </div>
+  
+{% endfor %}
+    
+</div>
+
+{% endblock %}

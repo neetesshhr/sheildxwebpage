@@ -1,16 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
+{% block title %}Welcome to Shieldx{% endblock %}
+{%block activehome %} active {% endblock %}
+{% block content %}
+<div>
+<div class="promotional-content">
+    <div class="content">
+        <img class="hacker-image" src="{{ url_for('static', filename='imgs/hacker.svg')}}"/> 
+        <div class="hacker-question">
+            Did you know?
+        </div>
+        <div class="hacker-text">
+            “I and my colleagues always target small companies to hack.”  
+        </div>
+    </div>
+    <div class="content">
+        <img src="{{url_for('static', filename='imgs/firewall.svg')}}" alt="" class="firewall-image">
+        <div class="firewall-question">
+            And that’s why?
+        </div>
+        <div class="firewall-text">
+            “Firewall is needed to protect yourself and your company applications”
+        </div>
+    </div>
+    <div class="content">
+        <img src="{{url_for('static', filename='imgs/customer.svg')}}" alt="" class="customer-image">
+        <div class="customer-question">
+            So now?
+        </div>
+        <div class="customer-text">
+            “They are  happy because they used ShieldX solution”  
+        </div>
+    </div>
+    <div class="content">
+        <div class="get-started">
+            To Protect Yourself
+            
+        </div>
+        <button type="button"  onclick = "window.location.href='/services/';"class="btn btn-default">Get Started</button>
+        
+        <div class="book-demo">
+            Or Book a Demo           
+        </div>
+        
+        <!-- <button type="button" class="btn btn-success">Book Demo</button> -->
+    </div>
+    <!-- Button that triggers the modal form -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal">
+   Book Demo
+  </button>
+  
+  <!-- Modal form -->
+  <div class="modal fade" id="bookModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Book</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form to enter book information -->
+          <form method="post">
+            <div class="form-group">
+              <label for="title">Name</label>
+              <input type="text" class="form-control" id="title" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="author">Company Name</label>
+              <input type="text" class="form-control" id="author" name="cname" required>
+            </div>
+            <div class="form-group">
+              <label for="genre">email</label>
+              <input type="email" class="form-control" name="email" id="genre" required>
+            </div>
+            <div class="form-style-6">
+              <label for="genre">Comment</label>
+              <textarea name="comment" placeholder="Type your Message"></textarea>
+              <input type="submit" value="Send" />
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
-    <title>Welcome</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-</head>
-<body>
-   <div class="check">
-    Yoooooo!!! <h1>This is from flask </h1>
-   </div> 
-</body>
-</html>
+  <div>
+    <img src="{{url_for('static', filename='imgs/logo.png')}}" class="shield-x-image" alt="">
+  </div>
+  <div id="quotesdisplay" class="quotes-display">
+    
+  </div>
+  <div class="classic-content">
+   <p> Everything that connects to the network is potentially vulnerable, and attacks on IoT devices can happen even before you connect them to the network. Our line of secure access points tighten up your internet of things. They create a lot of value and keep your network performance as good as it can be
+ </p> </div>
+</div>
+</div>
+<br> 
+<br>
+
+{% endblock %}

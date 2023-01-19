@@ -2,6 +2,14 @@
 {% block title %}Welcome to Shieldx{% endblock %}
 {%block activecontact %} active {% endblock %}
 {% block content %}
-
-
+<div class="form-style-6">
+    <h1>Contact Us</h1>
+    <form method="post">
+    <input type="text" name="name" placeholder="Your Name" />
+    <input type="email" name="email" placeholder="Email Address" />
+    <input type="text" name="cname", placeholder="Company Name"/>
+    <textarea name="comment" placeholder="Type your Message"></textarea>
+    <input type="submit" value="Send" />
+    </form>
+    </div>
 {% endblock %}

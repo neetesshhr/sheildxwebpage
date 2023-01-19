@@ -1,7 +1,98 @@
 {% extends "base.html" %}
-{% block title %}Welcome to Shieldx{% endblock %}
+{% block title %}ShieldX services{% endblock %}
 {%block activeservices %} active {% endblock %}
 {% block content %}
+<div>
+    <div class="firewall-services">
+        <img src="{{url_for('static', filename='imgs/firewall1.svg')}}" class="firewall-services-image" alt="">
+    </div>
+    
+    <div class="firewall-services-text">
+         <h1 class="firewall-header">Active Firewall</h1>
+         <p>As a decentralized and AI-powered firewall, our product offers a new approach to cybersecurity that is both highly effective and uniquely flexible. Unlike traditional firewalls, which are centrally managed and can be cumbersome to update and maintain, our decentralized firewall is distributed across multiple nodes, making it more resilient to attacks and easier to update.
 
+            The AI component of our firewall allows it to learn and adapt to new threats in real-time, providing an additional layer of protection against even the most sophisticated attackers. This means that your network will be constantly evolving and improving, ensuring that it stays one step ahead of the bad guys.
+            In addition to its technical capabilities, our decentralized and AI firewall also offers a range of benefits for organizations of all sizes. For example, because it is distributed across multiple nodes, it can be easily scaled up or down as needed, making it a cost-effective solution for businesses of any size.
+            Furthermore, because it is decentralized, our firewall is not subject to the limitations of traditional firewalls, which can only protect a single network. Instead, it can protect multiple networks simultaneously, providing an additional layer of security for organizations with complex IT infrastructure.
+            Overall, our decentralized and AI firewall offers a new and innovative approach to cybersecurity that is both highly effective and uniquely flexible. If you want to keep your network safe and secure, while also benefiting from the latest advances in AI and decentralization, our firewall is the perfect solution.</p>
+    </div>
+ <div class="box-card-display">
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <h1 class="bot">Bot Protection</h1>
+            <img src="{{url_for('static', filename='imgs/bot.svg')}}" alt="" class="bot-img">
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h1 class="monitoring">Active Monitoring</h1>
+            <img src="{{url_for('static', filename='imgs/monitor.svg')}}" alt="" class="monitor-img">
+          </div>
+
+        </div>
+        <div class="column">
+          <div class="card">
+            <h1 class="xss">
+                Xss  and SQLi Protection
+            </h1>
+            <img src="{{url_for('static', filename='imgs/xss.svg')}}" alt="" class="monitor-img">
+
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h1 class="ip">IP and Browser Ban</h1>
+            <img src="{{url_for('static', filename='imgs/ip.svg')}}" alt="" class="ip-img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-demo">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal">
+        Book Demo
+       </button>
+    </div>
+       
+       <!-- Modal form -->
+       <div class="modal fade" id="bookModal">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title">Add Book</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+             <div class="modal-body">
+               <!-- Form to enter book information -->
+               <form>
+                 <div class="form-group">
+                   <label for="title">Title</label>
+                   <input type="text" class="form-control" id="title" required>
+                 </div>
+                 <div class="form-group">
+                   <label for="author">Author</label>
+                   <input type="text" class="form-control" id="author" required>
+                 </div>
+                 <div class="form-group">
+                   <label for="genre">Genre</label>
+                   <input type="text" class="form-control" id="genre" required>
+                 </div>
+                 <div class="form-group">
+                   <label for="year">Year</label>
+                   <input type="text" class="form-control" id="year" required>
+                 </div>
+               </form>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <input type="submit" value="Send" />
+             </div>
+           </div>
+         </div>
+       </div>
+    
+</div>
 
 {% endblock %}

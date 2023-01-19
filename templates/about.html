@@ -2,5 +2,34 @@
 {% block title %}About{% endblock %}
 {% block activeabout %} active {% endblock %}
 {% block content %}
-<h1>This is about</h1>
+<div>
+    <div class="container-shieldx">
+        <img src="{{url_for('static', filename='imgs/logo.png')}}" alt="" class="flex-logo">
+        <p class="flex-text">
+            We are a SaaS company that offers Next Generation Firewalls as  cybersecurity solution. Our software uses AI and Machine Learning to detect all known hacker attacks as well as zero day attacks that haven't yet been identified through code recognition and patterns, and then takes action automatically. 
+        </p>
+    </div>
+    <div class="box-team">
+        <p>We are built with professional and passionate teams
+        </p>
+    </div>
+    <p class="team-tag">Meet Our Team</p>
+    <div>
+        <img src="{{url_for('static', filename='imgs/vincent.svg')}}" alt="" class="ceo-img">
+        <img src="{{url_for('static', filename='imgs/nitesh.svg')}}" alt="" class="cto-img">
+        <div class="ceo-title">
+            Vincent Ogol Kwasi<br/>
+            <span class="ceo-span">CEO</span>
+            <br/>
+            <a href="https://www.linkedin.com/in/vincent-kwasi/" target="_blank" rel="noopener noreferrer"><img src="{{url_for('static', filename='imgs/linkedin.svg')}}" alt="" class="linkedin-for-ceo"></a>
+        </div>
+        <div class="cto-title">
+            Nitesh Rijal<br/>
+            <span class="cto-span">CTO</span>
+            <br/>
+            <a href="https://www.linkedin.com/in/nitesh-rijal-b98792110/" target="_blank" rel="noopener noreferrer"><img src="{{url_for('static', filename='imgs/linkedin.svg')}}" alt="" class="linkedin-for-cto"></a>
+    
+        </div>
+    </div>
+</div>
 {% endblock %}

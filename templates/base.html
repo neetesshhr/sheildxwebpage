@@ -10,9 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>{% block title %}{% endblock %}</title>
+    <link rel = "icon" href = 
+"{{url_for('static', filename='imgs/logo.png')}}" 
+        type = "image/x-icon">
     
 </head>
-<body>
+<body onload=todayDate()>
     <div class="heading-element">
        <!-- This font awesome kit needs to be replaced with a productions codew hen implimented -->
 
@@ -24,9 +27,11 @@
         <ul id="menuList" class="menu inactive">
             <li class="{% block activehome %}{% endblock %} item"><a href="/home/"><i class="fa-solid fa-shield-halved"></i> Home</a></li>
             <li class="{% block activeservices %}{% endblock %} item"><a href="/services/"><i class="fa-light fa-ferry"></i>Services</a></li>
-            <li class="{% block activepricing %}{% endblock %} item"><a href="/pricing/"><i class="fa-light fa-calendar-days"></i>pricing</a></li>
+            <!-- <li class="{% block activepricing %}{% endblock %} item"><a href="/pricing/"><i class="fa-light fa-calendar-days"></i>pricing</a></li> -->
             <li class="{% block activeabout %}{% endblock %} item"><a href="/about/"><i class="fa-light fa-calendar-days"></i>About us</a></li>
             <li class="{% block activecontact %}{% endblock %} item"><a href="/contact/"><i class="fa-light fa-calendar-days"></i>contact</a></li>
+            <li class="{% block activecareers %}{% endblock %} item"><a href="/careers/"><i class="fa-light fa-calendar-days"></i>Careers</a></li>
+            
 
         </ul>
         </nav>
@@ -36,6 +41,16 @@
     <br>
     {% block content %}
     {% endblock %}
+    <br/>
+    <br/>
+   
+    <footer>
+       
+            &copy; <em id="date"></em>ShieldX
+      
+
+    </footer>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

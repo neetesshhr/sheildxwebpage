@@ -66,28 +66,30 @@
              </div>
              <div class="modal-body">
                <!-- Form to enter book information -->
-               <form>
-                 <div class="form-group">
-                   <label for="title">Title</label>
-                   <input type="text" class="form-control" id="title" required>
-                 </div>
-                 <div class="form-group">
-                   <label for="author">Author</label>
-                   <input type="text" class="form-control" id="author" required>
-                 </div>
-                 <div class="form-group">
-                   <label for="genre">Genre</label>
-                   <input type="text" class="form-control" id="genre" required>
-                 </div>
-                 <div class="form-group">
-                   <label for="year">Year</label>
-                   <input type="text" class="form-control" id="year" required>
-                 </div>
-               </form>
+               <form method="post">
+                <div class="form-group">
+                  <label for="title">Name</label>
+                  <input type="text" class="form-control" id="title" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="author">Company Name</label>
+                  <input type="text" class="form-control" id="author" name="cname" required>
+                </div>
+                <div class="form-group">
+                  <label for="genre">email</label>
+                  <input type="email" class="form-control" name="email" id="genre" required>
+                </div>
+                <div class="form-style-6">
+                  <label for="genre">Comment</label>
+                  <textarea name="comment" placeholder="Type your Message"></textarea>
+                  <input type="submit" value="Send" />
+                </div>
+                
+              </form>
              </div>
              <div class="modal-footer">
                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               <input type="submit" value="Send" />
+               <!-- <input type="submit" value="Send" /> -->
              </div>
            </div>
          </div>

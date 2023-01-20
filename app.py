@@ -42,9 +42,23 @@ def main():
 def about():
     return render_template('about.html')
 
-@app.route('/')
-@app.route('/services/')
+@app.route('/', methods = ['GET', 'POST'])
+@app.route('/services/', methods= ['GET', 'POST'])
 def services():
+    if request.method == 'POST':
+        name = request.form.get("name")
+        companyName = request.form.get("cname")
+        email = request.form.get('email')
+        comments = request.form.get('comment')
+
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('INSERT INTO bookdemo (Name, email, company_name, comment)'
+                    'VALUES (%s, %s, %s, %s)',
+                    (name, email, companyName, comments))
+        conn.commit()
+        cur.close()
+        conn.close()    
     return render_template('services.html')
 
 
